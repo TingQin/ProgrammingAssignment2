@@ -1,6 +1,9 @@
-## The first function sets and get the value of the matrix as well as the value of the inverse of the matrix, the second function calculates the inverse of the special matrix created in the first function if the inverse of the first function has not been calculated. 
+## This function calculates and caches the inverse of a matrix
+## The first function get the value of the matrix as well as the value of the inverse of the matrix  
+## and the second function calculates the inverse of the special matrix created in the first function if the 
+## inverse of the first function has not been calculated, otherwise it pulls out results directly to save time. 
 
-## This function creates a matrix and cache its inverse
+## The first function sets and get the value of the matrix as well as the value of the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function computes the inverse of the matrix created by the first function. If the inverse of the first function has been calculated it will skip the computation, otherwise, it will calculate again and sets the value in the cache via setsolve function. 
+## This function computes the inverse of the matrix created by the first function. 
+## If the inverse of the first function has been calculated it will skip the computation, 
+## otherwise, it will calculate again and sets the value in the cache via setsolve function. 
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
